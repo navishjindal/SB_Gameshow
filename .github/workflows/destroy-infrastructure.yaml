@@ -101,7 +101,7 @@ jobs:
 
       - name: Empty S3 bucket (ignore if missing)
         env:
-          BUCKET_NAME: sanskrit-familyfeud-gameshow-frontend-2
+          BUCKET_NAME: sanskrit-familyfeud-gameshow-frontend-4
         run: |
           if aws s3api head-bucket --bucket "$BUCKET_NAME" 2>/dev/null; then
             aws s3 rm "s3://$BUCKET_NAME" --recursive || true
