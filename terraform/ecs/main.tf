@@ -13,7 +13,7 @@ locals {
   cluster_name   = "gameshow-cluster"
   repo_name      = "gameshow-backend"
   container_port = 5004
-  instance_type  = "t2.micro"                
+  instance_type  = "t3.micro"                
   log_group      = "/ecs/gameshow-backend"
 }
 
