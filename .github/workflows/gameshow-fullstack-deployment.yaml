@@ -47,7 +47,7 @@ jobs:
 
       - name: Empty S3 bucket before destroy (only if exists)
         run: |
-          BUCKET_NAME="sanskrit-familyfeud-gameshow-frontend-2"
+          BUCKET_NAME="sanskrit-familyfeud-gameshow-frontend-4"
           
           # Check if the bucket exists
           if aws s3api head-bucket --bucket "$BUCKET_NAME" 2>/dev/null; then
@@ -297,7 +297,7 @@ jobs:
           
       - name: Upload frontend to S3
         env:
-          S3_BUCKET: sanskrit-familyfeud-gameshow-frontend-2
+          S3_BUCKET: sanskrit-familyfeud-gameshow-frontend-4
         run: |
           aws s3 sync frontend/build s3://$S3_BUCKET --delete
 
