@@ -8,7 +8,7 @@ export const setupServer = () => {
   const app = express();
   const server = createServer(app);
 
-  const raw = "http://localhost:3000";
+  const raw = "https://sb-gameshow.vercel.app";
   const allowedOrigins = raw.split(",").map(s => s.trim()).filter(Boolean);
 
   console.log("[BOOT] CORS_ORIGIN env =", process.env.CORS_ORIGIN);
