@@ -84,12 +84,12 @@ const HostGamePage: React.FC = () => {
       socketRef.current.disconnect();
     }
 
-    const socket = io(GAME_CONFIG.SOCKET_URL, {
-      forceNew: true,
-      reconnection: true,
-      reconnectionAttempts: 5,
-      reconnectionDelay: 1000,
-      timeout: 5004,
+const socket = io("https://gameshowdeploy.onrender.com", {
+    forceNew: true,
+    reconnection: true,
+    reconnectionAttempts: 5,
+    reconnectionDelay: 1000,
+    timeout: 5000,
     });
 
     socketRef.current = socket;
