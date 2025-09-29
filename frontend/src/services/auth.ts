@@ -3,11 +3,12 @@ import { LoginCredentials, LoginResponse, RegisterCredentials, RegisterResponse 
 import { API_BASE } from "../utils/constants";
 
 const API = axios.create({
-  baseURL: `${API_BASE}/api/auth`,
+  baseURL: "https://gameshowdeploy.onrender.com/api/auth",
   headers: {
     "Content-Type": "application/json",
   },
 });
+
 export const loginUser = async (
   credentials: LoginCredentials
 ): Promise<LoginResponse> => {
